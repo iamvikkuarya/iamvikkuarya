@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=iamvikkuarya&label=Profile%20views&color=0e75b6&style=flat" alt="iamvikkuarya" /> </p>
 
-- 🔭 I’m currently working on [QuickKart - Quick Commerce Product Comparison Platform](https://github.com/yourusername/quickkart)
+- 🔭 I’m currently working on [QuickKart - Quick Commerce Product Comparison Platform](https://github.com/iamvikkuarya/quickkart)
 
 - 🌱 I’m currently learning **Next.js, Tailwind CSS, and Playwright Automation**
 
