@@ -78,38 +78,6 @@ I'm a self-taught developer from India 🇮🇳, constantly learning and buildin
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-  
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=iamvikkuarya&show_icons=true&theme=radical&include_all_commits=true&count_private=true)](https://github.com/iamvikkuarya)
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iamvikkuarya&layout=compact&theme=radical&langs_count=8)](https://github.com/iamvikkuarya)
-
-[![GitHub Streak](https://streak-stats.demolab.com/?user=iamvikkuarya&theme=radical)](https://github.com/iamvikkuarya)
-
-</div>
-
----
-
-### 💼 Featured Projects
-
-<div align="center">
-
-[![QuickKart](https://github-readme-stats.vercel.app/api/pin/?username=iamvikkuarya&repo=quickkart&theme=radical)](https://github.com/iamvikkuarya/quickkart)
-
-</div>
-
----
-
-### 📈 Contribution Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=iamvikkuarya&theme=tokyo-night&hide_border=true" alt="Activity Graph" />
-</p>
-
----
-
 <div align="center">
   
 ### 💬 "Code is like humor. When you have to explain it, it's bad." – Cory House
