@@ -15,7 +15,7 @@
 
 I'm a self-taught developer from India 🇮🇳, constantly learning and building projects to sharpen my skills. I enjoy solving problems through code and exploring new technologies.
 
-- 🎯 **Currently Building:** [QuickKart](https://github.com/iamvikkuarya/quickkart) - A quick commerce product comparison platform
+- 🎯 **Currently Building:** [llm-council](https://github.com/iamvikkuarya/llm-council) - LLM Council which works together to answer your hardest questions
 - 📚 **Learning:** Next.js, Tailwind CSS, Playwright Automation, and modern web development practices
 - 💼 **Looking for:** Entry-level opportunities in software development
 - 🌱 **Focus Areas:** Full-stack development, automation, and building practical solutions
