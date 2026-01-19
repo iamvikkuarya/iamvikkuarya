@@ -16,7 +16,7 @@
 I'm a **QA Automation Engineer** from India 🇮🇳, passionate about ensuring software quality through automation. I specialize in building robust test frameworks, writing reliable automated tests, and advocating for quality at every stage of development.
 
 - 🎯 **Currently Working On:** Building comprehensive test automation frameworks with Playwright & Selenium
-- 🔬 **Featured Project:** [Bynry QA Case Study](https://github.com/iamvikkuarya/Bynry_Case_Solution) - Complete QA workflow demonstration
+- 🔬 **Featured Project:** [QA Case Study](https://github.com/iamvikkuarya/Bynry_Case_Solution) - Complete QA workflow demonstration
 - 📚 **Learning:** Advanced API Testing, CI/CD Integration, Performance Testing
 - 💼 **Looking for:** **QA Automation / SDET Engineer** roles
 - 🌱 **Focus Areas:** Test Automation, API Testing, E2E Testing, Quality Advocacy
