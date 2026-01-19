@@ -35,7 +35,7 @@ I'm a **QA Automation Engineer** from India 🇮🇳, passionate about ensuring 
   <a href="https://twitter.com/iamvikkuarya" target="_blank">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>
-  <a href="mailto:connect.vivekkm@gmail.com">
+  <a href="mailto:vivekkumararya2179@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
