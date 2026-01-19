@@ -21,7 +21,7 @@ I'm a **QA Automation Engineer** from India 🇮🇳, passionate about ensuring 
 - 💼 **Looking for:** **QA Automation / SDET Engineer** roles
 - 🌱 **Focus Areas:** Test Automation, API Testing, E2E Testing, Quality Advocacy
 - 💡 **Interests:** Building scalable test frameworks, process automation, and developer tooling
-- 📫 **Contact:** connect.vivekkm@gmail.com
+- 📫 **Contact:** vivekkumararya2179@gmail.com
 - 🌐 **Portfolio:** [iamvikkuarya.github.io/iamvikkuarya](https://iamvikkuarya.github.io/iamvikkuarya/)
 
 ---
