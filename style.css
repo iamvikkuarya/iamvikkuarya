@@ -635,8 +635,8 @@ a {
 }
 
 .college-icon {
-    width: 48px;
-    height: 48px;
+    width: 53px;
+    height: 53px;
     border-radius: 8px;
     object-fit: cover;
     flex-shrink: 0;
@@ -660,6 +660,28 @@ a {
     font-size: 0.9rem;
     color: var(--accent-color);
     white-space: nowrap;
+}
+
+/* Experience */
+.experience-details {
+    list-style-type: disc;
+    margin-top: 1rem;
+    margin-left: 1.25rem;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.experience-details li {
+    margin-bottom: 0.5rem;
+}
+
+.experience-details li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-details strong {
+    color: var(--text-color);
 }
 
 /* Skills */

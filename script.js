@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 10. TYPING ANIMATION
     // ============================================
     const typingText = document.getElementById('typingText');
-    const phrases = ['QA Automation Engineer.', 'SDET.', 'Test Automation Specialist.'];
+    const phrases = ['QA Automation Engineer.', 'Security Audit Intern.', 'SDET.', 'Penetration Tester.'];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
