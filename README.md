@@ -77,7 +77,7 @@ I'm a **QA & Security Testing Engineer** from India 🇮🇳, currently internin
 
 ### 📜 Certifications
 
-- 🎓 **Software Testing** — NPTEL / IIT Kharagpur
-- 🎓 **IBM Generative AI for Cybersecurity Professionals** — IBM / Coursera
-- 🎓 **Microsoft Cybersecurity** — Microsoft / Coursera
+- 🎓 **Software Testing** - NPTEL / IIT Kharagpur
+- 🎓 **IBM Generative AI for Cybersecurity Professionals** - IBM / Coursera
+- 🎓 **Microsoft Cybersecurity** - Microsoft / Coursera
 </parameter>
