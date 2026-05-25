@@ -266,5 +266,54 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    // ============================================
+    // 12. VISITOR COUNTER (Synced with GitHub Profile Views)
+    // ============================================
+    const visitorCountEl = document.getElementById('visitorCount');
+    if (visitorCountEl) {
+        const username = 'iamvikkuarya';
+        const badgeUrl = `https://komarev.com/ghpvc/?username=${username}`;
+
+        // Hidden image to increment count without CORS issues
+        const img = new Image();
+        img.src = badgeUrl;
+
+        // Try fetching through CORS proxies
+        const allOriginsUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(badgeUrl)}`;
+        const corsProxyIoUrl = `https://corsproxy.io/?${encodeURIComponent(badgeUrl)}`;
+
+        const parseSVGAndDisplay = (svgText) => {
+            const matches = [...svgText.matchAll(/<text[^>]*>(\d[\d,]*)<\/text>/g)];
+            if (matches.length > 0) {
+                const raw = matches[matches.length - 1][1];
+                const count = parseInt(raw.replace(/,/g, ''), 10);
+                visitorCountEl.textContent = count.toLocaleString();
+                return true;
+            }
+            return false;
+        };
+
+        fetch(allOriginsUrl)
+            .then(res => {
+                if (!res.ok) throw new Error();
+                return res.text();
+            })
+            .then(svg => {
+                parseSVGAndDisplay(svg);
+            })
+            .catch(() => {
+                fetch(corsProxyIoUrl)
+                    .then(res => {
+                        if (!res.ok) throw new Error();
+                        return res.text();
+                    })
+                    .then(svg => {
+                        parseSVGAndDisplay(svg);
+                    })
+                    .catch(() => {
+                        // Fallback (e.g. offline/local)
+                    });
+            });
+    }
 
 });

@@ -1158,6 +1158,27 @@ body.modal-open {
     }
 }
 
+/* Visitor Counter */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+}
+
+.visitor-counter svg {
+    opacity: 0.6;
+}
+
+.visitor-counter #visitorCount {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     display: flex;
