@@ -267,58 +267,30 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     // ============================================
-    // 12. VISITOR COUNTER (Synced with GitHub Profile Views)
+    // 12. VISITOR COUNTER (counterapi.dev — CORS-enabled JSON API)
     // ============================================
     const visitorCountEl = document.getElementById('visitorCount');
     if (visitorCountEl) {
-        const username = 'iamvikkuarya';
-        // Use format=flat for a simpler, more parseable SVG response
-        const badgeUrl = `https://komarev.com/ghpvc/?username=${username}&format=flat`;
+        // counterapi.dev increments + returns count in one request, with full CORS support.
+        // No proxy needed — works directly from GitHub Pages.
+        // BASE_COUNT preserves historical views from the previous komarev counter.
+        const BASE_COUNT = 519;
+        const apiUrl = 'https://api.counterapi.dev/v1/iamvikkuarya/portfolio/up';
 
-        // Silently ping the badge to register this visit
-        const img = new Image();
-        img.src = badgeUrl;
-
-        // CORS proxy URLs to try in sequence
-        const proxies = [
-            `https://api.allorigins.win/raw?url=${encodeURIComponent(badgeUrl)}`,
-            `https://corsproxy.io/?${encodeURIComponent(badgeUrl)}`,
-            `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(badgeUrl)}`,
-        ];
-
-        const parseSVGCount = (svgText) => {
-            // Match any <text> element containing only digits (with optional commas)
-            const matches = [...svgText.matchAll(/<text[^>]*>\s*(\d[\d,]*)\s*<\/text>/g)];
-            if (matches.length > 0) {
-                const raw = matches[matches.length - 1][1];
-                return parseInt(raw.replace(/,/g, ''), 10);
-            }
-            return null;
-        };
-
-        const tryProxy = (index) => {
-            if (index >= proxies.length) {
-                // All proxies failed — keep the dash, log for debugging
-                console.warn('Visitor counter: all proxies failed.');
-                return;
-            }
-            fetch(proxies[index])
-                .then(res => {
-                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                    return res.text();
-                })
-                .then(svg => {
-                    const count = parseSVGCount(svg);
-                    if (count !== null) {
-                        visitorCountEl.textContent = count.toLocaleString();
-                    } else {
-                        throw new Error('No count found in SVG');
-                    }
-                })
-                .catch(() => tryProxy(index + 1));
-        };
-
-        tryProxy(0);
+        fetch(apiUrl)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.json();
+            })
+            .then(data => {
+                if (data && typeof data.count === 'number') {
+                    visitorCountEl.textContent = (BASE_COUNT + data.count).toLocaleString();
+                }
+            })
+            .catch(err => {
+                console.warn('Visitor counter failed:', err);
+                // Dash stays as-is — silent failure for visitors
+            });
     }
 
 });
