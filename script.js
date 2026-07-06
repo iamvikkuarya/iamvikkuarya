@@ -272,48 +272,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const visitorCountEl = document.getElementById('visitorCount');
     if (visitorCountEl) {
         const username = 'iamvikkuarya';
-        const badgeUrl = `https://komarev.com/ghpvc/?username=${username}`;
+        // Use format=flat for a simpler, more parseable SVG response
+        const badgeUrl = `https://komarev.com/ghpvc/?username=${username}&format=flat`;
 
-        // Hidden image to increment count without CORS issues
+        // Silently ping the badge to register this visit
         const img = new Image();
         img.src = badgeUrl;
 
-        // Try fetching through CORS proxies
-        const allOriginsUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(badgeUrl)}`;
-        const corsProxyIoUrl = `https://corsproxy.io/?${encodeURIComponent(badgeUrl)}`;
+        // CORS proxy URLs to try in sequence
+        const proxies = [
+            `https://api.allorigins.win/raw?url=${encodeURIComponent(badgeUrl)}`,
+            `https://corsproxy.io/?${encodeURIComponent(badgeUrl)}`,
+            `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(badgeUrl)}`,
+        ];
 
-        const parseSVGAndDisplay = (svgText) => {
-            const matches = [...svgText.matchAll(/<text[^>]*>(\d[\d,]*)<\/text>/g)];
+        const parseSVGCount = (svgText) => {
+            // Match any <text> element containing only digits (with optional commas)
+            const matches = [...svgText.matchAll(/<text[^>]*>\s*(\d[\d,]*)\s*<\/text>/g)];
             if (matches.length > 0) {
                 const raw = matches[matches.length - 1][1];
-                const count = parseInt(raw.replace(/,/g, ''), 10);
-                visitorCountEl.textContent = count.toLocaleString();
-                return true;
+                return parseInt(raw.replace(/,/g, ''), 10);
             }
-            return false;
+            return null;
         };
 
-        fetch(allOriginsUrl)
-            .then(res => {
-                if (!res.ok) throw new Error();
-                return res.text();
-            })
-            .then(svg => {
-                parseSVGAndDisplay(svg);
-            })
-            .catch(() => {
-                fetch(corsProxyIoUrl)
-                    .then(res => {
-                        if (!res.ok) throw new Error();
-                        return res.text();
-                    })
-                    .then(svg => {
-                        parseSVGAndDisplay(svg);
-                    })
-                    .catch(() => {
-                        // Fallback (e.g. offline/local)
-                    });
-            });
+        const tryProxy = (index) => {
+            if (index >= proxies.length) {
+                // All proxies failed — keep the dash, log for debugging
+                console.warn('Visitor counter: all proxies failed.');
+                return;
+            }
+            fetch(proxies[index])
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    return res.text();
+                })
+                .then(svg => {
+                    const count = parseSVGCount(svg);
+                    if (count !== null) {
+                        visitorCountEl.textContent = count.toLocaleString();
+                    } else {
+                        throw new Error('No count found in SVG');
+                    }
+                })
+                .catch(() => tryProxy(index + 1));
+        };
+
+        tryProxy(0);
     }
 
 });
