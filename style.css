@@ -1432,12 +1432,39 @@ section.tight { padding: 40px 0; }
   font-style: italic;
   font-weight: 500;
 }
-@media (pointer: fine) {
-  .cert-card:hover { transform: translateY(-3px); }
+/* Desktop-only notice banner — shown on mobile/tablet */
+#mobile-banner {
+  display: none;
 }
-@media (pointer: coarse) {
-  .cert-card { cursor: pointer; }
-  .cert-card:hover { transform: none; }
+
+/* Mobile/tablet banner styling */
+@media (max-width: 1024px) {
+  .shell { display: none !important; }
+  #mobile-banner {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: env(safe-area-inset-top) 24px env(safe-area-inset-bottom);
+  }
+  .mobile-banner-inner {
+    text-align: center;
+    max-width: 420px;
+  }
+  .mobile-banner-inner svg {
+    width: 48px;
+    height: 48px;
+    color: var(--coral);
+    margin-bottom: 24px;
+  }
+  .mobile-banner-inner p {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-mute);
+    letter-spacing: 0.02em;
+  }
+  .mobile-banner-inner p br { display: block; margin: 8px 0; }
 }
 .testimonial-copy h2.mt-xl {
   margin-top: 30px;
