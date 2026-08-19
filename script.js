@@ -1,296 +1,101 @@
-/**
- * Portfolio Script
- * Simple, readable JavaScript for portfolio interactions
+/*
+ * Open Design — client-side behavior for the Atelier Zero landing page.
+ *
+ * 1. Scroll-reveal observer — watches every [data-reveal] element and
+ *    flips data-revealed='true' once it enters the viewport, triggering
+ *    the CSS transition.
+ *
+ * 2. Headroom-style sticky header — hides the nav on downward scroll,
+ *    re-pins it on upward scroll, and always keeps it visible near the
+ *    top of the page.
+ *
+ * Mirrors the behavior from apps/landing-page/app/_components/.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+  'use strict';
 
-    // ============================================
-    // 1. PAGE LOADER
-    // ============================================
-    const loader = document.querySelector('.page-loader');
-    const navbar = document.querySelector('.navbar');
-    const heroContent = document.querySelector('.hero-section .container');
+  // ============================================
+  // DOM REFERENCES
+  // ============================================
+  var nav = document.getElementById('nav');
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelectorAll('.nav-links a, .nav-cta');
+  var html = document.documentElement;
+  var yearEl = document.getElementById('year');
 
-    // Hide initially, then fade in
-    if (navbar) navbar.style.opacity = '0';
-    if (heroContent) heroContent.style.opacity = '0';
+  // ============================================
+  // MOBILE NAV TOGGLER
+  // ============================================
+  function toggleNav() {
+    var willOpen = hamburger.getAttribute('aria-expanded') !== 'true';
+    hamburger.setAttribute('aria-expanded', String(willOpen));
+    hamburger.classList.toggle('active', willOpen);
+    nav.classList.toggle('nav-mobile-open', willOpen);
+    html.classList.toggle('nav-open', willOpen);
+  }
 
-    setTimeout(() => loader.classList.add('loaded'), 300);
-    setTimeout(() => {
-        if (navbar) {
-            navbar.style.transition = 'opacity 0.6s ease';
-            navbar.style.opacity = '1';
-        }
-    }, 400);
-    setTimeout(() => {
-        if (heroContent) {
-            heroContent.style.transition = 'opacity 0.8s ease';
-            heroContent.style.opacity = '1';
-        }
-        // Auto-scroll to hero section for clean landing
-        const heroSection = document.getElementById('hero');
-        if (heroSection) {
-            heroSection.scrollIntoView({ behavior: 'instant' });
-        }
-    }, 600);
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleNav);
+  }
 
-    // ============================================
-    // 2. FOOTER YEAR
-    // ============================================
-    document.getElementById('year').textContent = new Date().getFullYear();
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', toggleNav);
+  });
 
-    // ============================================
-    // 3. DARK MODE TOGGLE
-    // ============================================
-    const themeToggle = document.querySelector('.theme-toggle');
+  html.addEventListener('click', function (e) {
+    if (nav.classList.contains('nav-mobile-open') && !e.target.closest('header')) {
+      toggleNav();
+    }
+  });
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+  // ============================================
+  // 1. SCROLL-REVEAL OBSERVER
+  // ============================================
+  var elements = document.querySelectorAll('[data-reveal]:not([data-revealed])');
+  if (elements.length) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      elements.forEach(function (el) { el.dataset.revealed = 'true'; });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.dataset.revealed = 'true';
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -15% 0px' });
+
+      elements.forEach(function (el) { observer.observe(el); });
+    }
+  }
+
+  // ============================================
+  // 2. HEADROOM STICKY HEADER
+  // ============================================
+  if (nav) {
+    var SHOW_TOP = 100;
+    var DELTA = 6;
+    var lastY = window.scrollY;
+
+    function onScroll() {
+      var y = window.scrollY;
+      var d = y - lastY;
+      if (y <= SHOW_TOP) {
+        nav.classList.remove('is-hidden');
+      } else if (d > DELTA) {
+        nav.classList.add('is-hidden');
+      } else if (d < -DELTA) {
+        nav.classList.remove('is-hidden');
+      }
+      lastY = y;
     }
 
-    // Toggle theme on click
-    themeToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-    });
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
-    // ============================================
-    // 4. SCROLL ANIMATIONS
-    // ============================================
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+  // ============================================
+  // 3. FOOTER YEAR
+  // ============================================
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    document.querySelectorAll('.section-title, .project-card, .about-content p').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    // ============================================
-    // 5. SMOOTH SCROLL FOR NAV LINKS
-    // ============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // ============================================
-    // 6. NAVBAR SCROLL EFFECT
-    // ============================================
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            navbar.style.background = 'var(--bg-color)';
-            navbar.style.boxShadow = '0 1px 0 var(--border-color)';
-        } else {
-            navbar.style.background = 'transparent';
-            navbar.style.boxShadow = 'none';
-        }
-    });
-
-    // ============================================
-    // 7. RESUME MODAL
-    // ============================================
-    const resumeModal = document.getElementById('resumeModal');
-    const closeModalBtn = document.getElementById('closeModal');
-
-    // Open modal
-    document.querySelectorAll('.resume-trigger').forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            resumeModal.classList.add('active');
-            document.body.classList.add('modal-open');
-        });
-    });
-
-    // Close modal
-    function closeResumeModal() {
-        resumeModal.classList.remove('active');
-        document.body.classList.remove('modal-open');
-    }
-
-    if (closeModalBtn) closeModalBtn.addEventListener('click', closeResumeModal);
-    resumeModal.addEventListener('click', (e) => {
-        if (e.target === resumeModal) closeResumeModal();
-    });
-
-    // ============================================
-    // 7B. CERTIFICATE MODAL
-    // ============================================
-    const certModal = document.getElementById('certModal');
-    const certEmbed = certModal ? certModal.querySelector('embed') : null;
-    const certFullScreen = certModal ? certModal.querySelector('a') : null;
-    const closeCertModalBtn = document.getElementById('closeCertModal');
-
-    // Open cert modal
-    document.querySelectorAll('.cert-modal-trigger').forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            const url = trigger.getAttribute('href');
-            if (certEmbed) certEmbed.src = url;
-            if (certFullScreen) certFullScreen.href = url;
-            if (certModal) {
-                certModal.classList.add('active');
-                document.body.classList.add('modal-open');
-            }
-        });
-    });
-
-    // Close cert modal
-    function closeCertModal() {
-        if (certModal) {
-            certModal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-            // Optional: clear src to stop loading? Not strictly necessary for PDF embed
-        }
-    }
-
-    if (closeCertModalBtn) closeCertModalBtn.addEventListener('click', closeCertModal);
-    if (certModal) {
-        certModal.addEventListener('click', (e) => {
-            if (e.target === certModal) closeCertModal();
-        });
-    }
-
-    // ============================================
-    // 8. EMAIL POPUP
-    // ============================================
-    const emailTrigger = document.getElementById('emailTrigger');
-    const emailPopup = document.getElementById('emailPopup');
-    const copyBtn = document.getElementById('copyBtn');
-    const emailText = document.getElementById('emailText');
-    const copyFeedback = document.getElementById('copyFeedback');
-
-    if (emailTrigger && emailPopup) {
-        // Toggle popup
-        emailTrigger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            emailPopup.classList.toggle('active');
-        });
-
-        // Copy to clipboard
-        copyBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigator.clipboard.writeText(emailText.textContent);
-            copyFeedback.classList.add('show');
-            setTimeout(() => copyFeedback.classList.remove('show'), 1500);
-        });
-
-        // Close on outside click
-        document.addEventListener('click', (e) => {
-            if (!emailTrigger.contains(e.target) && !emailPopup.contains(e.target)) {
-                emailPopup.classList.remove('active');
-            }
-        });
-    }
-
-    // ============================================
-    // 9. ESCAPE KEY - CLOSE ALL MODALS/POPUPS
-    // ============================================
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            resumeModal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-            if (emailPopup) emailPopup.classList.remove('active');
-        }
-    });
-
-    // ============================================
-    // 10. TYPING ANIMATION
-    // ============================================
-    const typingText = document.getElementById('typingText');
-    const phrases = ['QA Automation Engineer.', 'Security Audit Intern.', 'SDET.', 'Penetration Tester.'];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-        const currentPhrase = phrases[phraseIndex];
-
-        if (isDeleting) {
-            typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let delay = isDeleting ? 50 : 100;
-
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            delay = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            delay = 500;
-        }
-
-        setTimeout(typeEffect, delay);
-    }
-
-    if (typingText) {
-        setTimeout(typeEffect, 1000); // Start after page load
-    }
-
-    // ============================================
-    // 11. BACK TO TOP BUTTON
-    // ============================================
-    const backToTop = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    // ============================================
-    // 12. VISITOR COUNTER (counterapi.dev — CORS-enabled JSON API)
-    // ============================================
-    const visitorCountEl = document.getElementById('visitorCount');
-    if (visitorCountEl) {
-        // counterapi.dev increments + returns count in one request, with full CORS support.
-        // No proxy needed — works directly from GitHub Pages.
-        // BASE_COUNT preserves historical views from the previous komarev counter.
-        const BASE_COUNT = 519;
-        const apiUrl = 'https://api.counterapi.dev/v1/iamvikkuarya/portfolio/up';
-
-        fetch(apiUrl)
-            .then(res => {
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                return res.json();
-            })
-            .then(data => {
-                if (data && typeof data.count === 'number') {
-                    visitorCountEl.textContent = (BASE_COUNT + data.count).toLocaleString();
-                }
-            })
-            .catch(err => {
-                console.warn('Visitor counter failed:', err);
-                // Dash stays as-is — silent failure for visitors
-            });
-    }
-
-});
+})();

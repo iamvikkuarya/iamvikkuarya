@@ -13,14 +13,15 @@
 
 ### 👨‍💻 About Me
 
-I'm a **QA & Security Testing Engineer** from India 🇮🇳, currently interning at **STQC ERTL North (MeitY)** where I perform API penetration testing and security audits on live government systems. On the automation side, I build end-to-end test frameworks with Playwright, pytest, and Python.
+I'm a **QA & Security Testing Engineer** from India 🇮🇳, currently working at **STQC ERTL North (MeitY)** where I perform API penetration testing and security audits on live government systems. On the automation side, I build end-to-end test frameworks with Playwright, pytest, and Python.
 
 - 🔐 **Currently:** API penetration testing & security audits @ STQC ERTL North (MeitY)
-- 🛠️ **Framework:** [playwright-qa-framework](https://github.com/iamvikkuarya/playwright-qa-framework) — flaky test fixes, framework design, integration testing
+- 🛠️ **Framework:** [playwright-qa-framework-v2](https://github.com/iamvikkuarya/playwright-qa-framework-v2) — flaky test fixes, framework design, integration testing
 - 🎯 **Standard:** OWASP API Security Top 10 (2023)
+- 🎓 **Education:** MCA student @ MIT-WPU Pune
 - 💼 **Open to:** SDET, Security QA, or Junior Penetration Tester roles in Delhi NCR
 - 📫 **Contact:** vivekkumararya2179@gmail.com
-- 🌐 **Portfolio:** [iamvikkuarya.github.io/iamvikkuarya](https://iamvikkuarya.github.io/iamvikkuarya/)
+- 🌐 **Portfolio:** [iamvikkuarya.github.io](https://iamvikkuarya.github.io)
 
 ---
 
@@ -78,6 +79,26 @@ I'm a **QA & Security Testing Engineer** from India 🇮🇳, currently internin
 ### 📜 Certifications
 
 - 🎓 **Software Testing** — NPTEL / IIT Kharagpur
-- 🎓 **IBM Generative AI for Cybersecurity Professionals** — IBM / Coursera
 - 🎓 **Software Quality Assurance & Testing** — Coursera / Board Infinity
-</parameter>
+- 🎓 **Testing Tools & Automation (Selenium)** — ExcelR
+- 🎓 **IBM Generative AI for Cybersecurity Professionals** — IBM / Coursera
+
+---
+
+### 🌟 Featured Projects
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **QA Automation Framework** | Multi-tenant Playwright POM architecture with API+UI integration | [github.com/iamvikkuarya/playwright-qa-framework-v2](https://github.com/iamvikkuarya/playwright-qa-framework-v2) |
+| **LLM Council** | API testing framework for multi-LLM comparison across 5+ AI providers | [github.com/iamvikkuarya/llm-council](https://github.com/iamvikkuarya/llm-council) |
+| **QuickKart** | Multi-platform web automation with anti-bot bypass | [github.com/iamvikkuarya/QuickKart](https://github.com/iamvikkuarya/QuickKart) |
+| **TalentScout** | AI hiring assistant with E2E test coverage for chatbot flows | [github.com/iamvikkuarya/Hiring-Assistant](https://github.com/iamvikkuarya/Hiring-Assistant) |
+
+---
+
+### 🎯 Currently Available For
+
+- **SDET / QA Automation Engineer** roles
+- **Security QA / Junior Penetration Tester** roles
+
+Reach out via email or LinkedIn — all leads go to the same inbox.

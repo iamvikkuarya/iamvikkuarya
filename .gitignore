@@ -1,2 +1,26 @@
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project files
 iamvikkuarya.code-workspace
 apple
+Design
+
+# Design tooling
+.impeccable/
+.playwright-mcp/
+
+# Internal docs
+DESIGN.md
+PRODUCT.md
+imagegen-prompts.md

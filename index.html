@@ -1,514 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivek Kumar Arya | QA & Security Testing</title>
-    <meta name="description"
-        content="Portfolio of Vivek Kumar, a QA Automation Engineer specializing in Playwright, Selenium, Python, and Test Framework Design.">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vivek Kumar Arya - QA & Security Testing Portfolio</title>
+<meta name="description" content="Vivek Kumar Arya - QA Automation & Security intern at MeitY STQC. Test frameworks, OWASP API auditing, and penetration testing on live government infrastructure." />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://iamvikkuarya.github.io/">
-    <meta property="og:title" content="Vivek Kumar Arya | QA & Security Testing">
-    <meta property="og:description"
-        content="Building robust test automation frameworks, ensuring software quality with Playwright, Selenium & Python.">
-    <meta property="og:image" content="https://iamvikkuarya.github.io/assets/158435.jpg">
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://iamvikkuarya.github.io/" />
+<meta property="og:title" content="Vivek Kumar Arya - QA & Security Testing Portfolio" />
+<meta property="og:description" content="Test frameworks, OWASP API auditing, and penetration testing on live government infrastructure." />
+<meta property="og:image" content="https://iamvikkuarya.github.io/assets/hero.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://iamvikkuarya.github.io/assets/hero.png" />
+<link rel="icon" href="data:," />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://iamvikkuarya.github.io/">
-    <meta property="twitter:title" content="Vivek Kumar Arya | QA & Security Testing">
-    <meta property="twitter:description"
-        content="Building robust test automation frameworks, ensuring software quality with Playwright, Selenium & Python.">
-    <meta property="twitter:image" content="https://iamvikkuarya.github.io/assets/158435.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader">
-        <div class="loader-spinner"></div>
-    </div>
+<!--
+THESIS: A portfolio is a credential artifact - a gallery of disciplined craft in testing and security. The editorial paper/ink system signals that rigor.
 
-    <!-- Background Pattern -->
-    <div class="grid-pattern"></div>
+OWN-WORLD: Warm paper ground (#efe7d2), deep ink (#15140f), coral accent (#ed6f5c). Inter Tight display, Inter body, Playfair italic accents, JetBrains Mono coordinates. Side rails, section rules with roman numerals, wire ticker, scroll-reveal staggered reveals, sticky headroom nav.
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="assets/sign.png" alt="Signature" class="logo-img">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <span class="moon">☽</span>
-                    <span class="sun">☀</span>
-                </button>
-            </li>
-        </ul>
+STORY: A hiring manager scans for evidence of technical depth. They land on a clear hero offer, scroll a global ticker of collaborators and contexts, read a manifesto about treating testing as craft, scan capabilities (skill categories), browse labs (real projects with repos), follow a 4-stage method, deep-dive one featured case study, then reach a direct contact CTA.
+
+FIRST VIEWPORT: Headline "QA & Security Testing with <em>engineering</em> rigor and <em>adversarial</em> intent." Lead paragraph naming STQC internship. Two action buttons - View Work (primary coral) + Resume (ghost). Hero image of project work with corner annotations and a stage index. A quiet pulse signals the live nature of the practice.
+
+FORM: Experience mode - the artifact leads. The sticky header hides on scroll-down and re-pins on scroll-up. Reduced-motion disables all reveal and marquee animation. Plain static HTML/CSS/JS, no framework.
+
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+
+<div class="side-rail right" aria-hidden="true">
+  <span class="rail-text">Vivek Kumar Arya - Vol. 01 · QA & Security · Made on Earth</span>
+</div>
+<div class="side-rail left" aria-hidden="true">
+  <span class="rail-text">Testing · Security · Automation · OWASP · Penetration</span>
+</div>
+
+<div class="shell">
+
+<!-- TOP METADATA STRIP -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><b>VKA / 2026</b> &nbsp;·&nbsp; Vol. 01 / Issue Nº 01</span>
+    <span class="mid">
+      <span>Filed under <b class="coral">QA · Security · Automation</b></span>
+      <span>Open to full-time roles</span>
+    </span>
+    <span class="right">
+      <a class="topbar-link" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener"><span class="pulse"></span>MeitY STQC · Feb – Aug 2026</a>
+      <span><b>EN</b></span>
+    </span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">V</span>
+      <span>Vivek Kumar Arya</span>
+      <span class="brand-meta"><b>QA & Security</b>New Delhi / India</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About<span class="num">I</span></a></li>
+        <li><a href="#capabilities">Skills<span class="num">II</span></a></li>
+        <li><a href="#labs">Projects<span class="num">IV</span></a></li>
+        <li><a href="#method">Method<span class="num">V</span></a></li>
+        <li><a href="#contact">Contact<span class="num">VII</span></a></li>
+      </ul>
     </nav>
+    <div class="nav-side">
+      <a class="nav-cta ghost" href="assets/resume1.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a class="nav-cta" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener">GitHub</a>
+      <span class="status-dot" aria-hidden="true"></span>
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  </div>
+</header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container hero-content-wrapper">
-                <div class="hero-text">
-                    <div class="profile-photo fade-in">
-                        <img src="assets/profile.jpg" alt="Vivek Kumar" onerror="this.style.display='none'">
-                    </div>
-                    <h1 class="fade-in">Hello, I'm <span class="highlight">Vivek</span>.</h1>
-                    <p class="subtitle fade-in delay-1"><span id="typingText"></span><span
-                            class="typing-cursor">|</span></p>
-                    <p class="description fade-in delay-2">QA Automation & Security Intern at MeitY STQC -
-                        building test frameworks, auditing APIs against OWASP standards, and conducting penetration
-                        testing on live government systems.</p>
-                    <div class="hero-buttons">
-                        <a href="#experience" class="btn fade-in delay-3">View Work</a>
-                        <a href="assets/resume1.pdf" target="_blank" class="btn fade-in delay-3 resume-trigger">View
-                            Resume</a>
-                        <a href="https://github.com/iamvikkuarya" target="_blank" class="btn fade-in delay-3">GitHub</a>
-                    </div>
-                    <!-- Visitor Counter -->
-                    <div class="visitor-counter fade-in delay-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        <span id="visitorCount">—</span>
-                        <span>views</span>
-                    </div>
-                    <!-- Scroll Indicator -->
-                    <a href="#about" class="scroll-indicator fade-in delay-3">
-                        <span>Scroll</span>
-                        <div class="scroll-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M12 5v14M5 12l7 7 7-7" />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p>I'm <strong>Vivek Kumar Arya</strong>, a Software Quality & Security Intern at the
-                        <strong>Ministry of Electronics & Information Technology (MeitY) - STQC Directorate</strong>,
-                        specializing in test automation and actively expanding my expertise into API security auditing and penetration testing.
-                    </p>
-                    <p>With a strong foundation in QA and test automation, I bring hands-on experience in debugging flaky tests,
-                        designing multi-tenant test frameworks, E2E integration testing, parallel test execution, and CI/CD pipeline
-                        optimization. At STQC, I conduct API security audits against OWASP standards and perform authorized
-                        penetration testing on live government infrastructure.</p>
-                    <p>Currently interning at a government body while pursuing my MCA, I'm open to full-time QA
-                        Automation / SDET / Security QA roles where I can apply my expertise across the quality and
-                        security spectrum.</p>
-                </div>
-
-                <div id="experience" class="experience-section" style="margin-top: 3rem;">
-                    <h3
-                        style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-color); margin-bottom: 1.5rem;">
-                        Experience</h3>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="education-content">
-                                <img src="assets/meity_in_logo.jpg" alt="MEITY STQC" class="college-icon"
-                                    onerror="this.style.display='none'">
-                                <div>
-                                    <h4>Software Quality & Security Intern</h4>
-                                    <p class="institution">Ministry of Electronics & Information Technology - STQC
-                                        Directorate</p>
-                                </div>
-                            </div>
-                            <span class="education-year">Feb 2026 - Present</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Performed API security audit of the Passport Seva Portal against
-                                <strong>OWASP API Security Top 10 (2023)</strong>, testing multiple endpoints using Burp
-                                Suite Professional and Postman.
-                            </li>
-                            <li>Conducted end-to-end penetration testing on a live government web portal
-                                using Kali Linux tools - covering network
-                                survey, port scanning, OS fingerprinting, SSL/TLS analysis, and DNS enumeration.</li>
-                            <li>Authored formal security audit report with findings, impact analysis, and remediation
-                                recommendations aligned to OWASP standards.</li>
-                            <li>Worked within a controlled internal test environment following government security
-                                compliance protocols.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="education-section" style="margin-top: 3rem;">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="education-content">
-                                <img src="assets/mitwpu-logo.jpg" alt="MIT-WPU" class="college-icon"
-                                    onerror="this.style.display='none'">
-                                <div>
-                                    <h4>Master of Computer Applications (MCA)</h4>
-                                    <p class="institution">MIT World Peace University, Pune</p>
-                                </div>
-                            </div>
-                            <span class="education-year">2024 - 2026</span>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="education-content">
-                                <img src="assets/tulas-logo.jpg" alt="Tulas Institute" class="college-icon"
-                                    onerror="this.style.display='none'">
-                                <div>
-                                    <h4>Bachelor of Computer Applications (BCA)</h4>
-                                    <p class="institution">Tulas Institute, Dehradun</p>
-                                </div>
-                            </div>
-                            <span class="education-year">2021 - 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-container" style="margin-top: 3rem;">
-                    <h3>Technical Skills</h3>
-
-                    <div class="skill-category">
-                        <h4>Testing & Automation</h4>
-                        <div class="tags">
-                            <span>Playwright</span>
-                            <span>Selenium</span>
-                            <span>pytest</span>
-                            <span>Postman</span>
-                            <span>API Testing</span>
-                            <span>E2E Testing</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Security & Auditing</h4>
-                        <div class="tags">
-                            <span>Burp Suite Professional</span>
-                            <span>Kali Linux</span>
-                            <span>Penetration Testing</span>
-                            <span>OWASP API Top 10</span>
-                            <span>SSL/TLS Analysis</span>
-                            <span>DNS Enumeration</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Languages</h4>
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                            <span>SQL</span>
-                            <span>HTML/CSS</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Frameworks & Tools</h4>
-                        <div class="tags">
-                            <span>Flask</span>
-                            <span>FastAPI</span>
-                            <span>React</span>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>CI/CD & DevOps</h4>
-                        <div class="tags">
-                            <span>Git/GitHub</span>
-                            <span>GitHub Actions</span>
-                            <span>Docker</span>
-                            <span>CI/CD Pipelines</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Databases</h4>
-                        <div class="tags">
-                            <span>SQLite</span>
-                            <span>PostgreSQL</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">My Projects</h2>
-                <div class="project-grid">
-                    <!-- Featured Project: QACase Study -->
-                    <article class="project-card">
-                        <div>
-                            <div>
-                                <h3>QA Automation Framework</h3>
-                                <p>Comprehensive test automation case study: debugged 7 flaky test issues, designed
-                                    multi-tenant test framework with Page Object Model, and built API+UI integration
-                                    tests with tenant isolation validation.</p>
-                                <div class="tags">
-                                    <span>Playwright</span>
-                                    <span>pytest</span>
-                                    <span>Python</span>
-                                    <span>API Testing</span>
-                                    <span>Page Object Model</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/iamvikkuarya/playwright-qa-framework" target="_blank"
-                                class="project-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                <span>View on GitHub</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: QuickKart -->
-                    <article class="project-card">
-                        <div>
-                            <h3>QuickKart</h3>
-                            <p>Multi-platform web automation with Playwright. Parallel test execution using
-                                ThreadPoolExecutor, anti-bot bypass techniques, and 95% scraping accuracy validation
-                                across 4 e-commerce platforms.</p>
-                            <div class="tags">
-                                <span>Playwright</span>
-                                <span>Python</span>
-                                <span>Flask</span>
-                                <span>Parallel Execution</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/iamvikkuarya/QuickKart" target="_blank" class="project-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            <span>View on GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </article>
-
-                    <!-- Project 3: LLM Council -->
-                    <article class="project-card">
-                        <div>
-                            <h3>LLM Council</h3>
-                            <p>API testing framework for multi-LLM comparison platform. Implemented timeout handling,
-                                retry logic, concurrent request validation, and error handling for 5+ AI providers.</p>
-                            <div class="tags">
-                                <span>FastAPI</span>
-                                <span>pytest</span>
-                                <span>API Testing</span>
-                                <span>asyncio</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/iamvikkuarya/llm-council" target="_blank" class="project-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            <span>View on GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </article>
-
-                    <!-- Project 4: TalentScout -->
-                    <article class="project-card">
-                        <div>
-                            <h3>TalentScout</h3>
-                            <p>AI hiring assistant with comprehensive test coverage. End-to-end testing for chatbot
-                                flows,
-                                input validation, session management, and edge case scenarios. 85%+ test accuracy.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>Streamlit</span>
-                                <span>E2E Testing</span>
-                                <span>Validation</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/iamvikkuarya/Hiring-Assistant" target="_blank" class="project-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            <span>View on GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications" class="section">
-            <div class="container">
-                <h2 class="section-title">Certifications & Publications</h2>
-                <div class="certifications-grid">
-                    <a href="#" class="cert-item cert-link">
-                        <div class="cert-icon">🏅</div>
-                        <div class="cert-content">
-                            <h4>Software Testing</h4>
-                            <p class="cert-issuer">NPTEL / IIT Kharagpur</p>
-                        </div>
-                        <svg class="cert-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" />
-                        </svg>
-                    </a>
-                    <a href="assets/SQA.pdf" target="_blank" class="cert-item cert-link cert-modal-trigger">
-                        <div class="cert-icon">🎓</div>
-                        <div class="cert-content">
-                            <h4>Software Quality Assurance and Testing</h4>
-                            <p class="cert-issuer">Board Infinity / Coursera</p>
-                        </div>
-                        <svg class="cert-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" />
-                        </svg>
-                    </a>
-                    <a href="assets/EXCELR.pdf" target="_blank" class="cert-item cert-link cert-modal-trigger">
-                        <div class="cert-icon">🛡️</div>
-                        <div class="cert-content">
-                            <h4>Certificate program in Testing Tools / Selenium with Java & Python /API Testing</h4>
-                            <p class="cert-issuer">ExcelR</p>
-                        </div>
-                        <svg class="cert-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" />
-                        </svg>
-                    </a>
-                    <a href="assets/Coursera.pdf" class="cert-item cert-link cert-modal-trigger">
-                        <div class="cert-icon">📄</div>
-                        <div class="cert-content">
-                            <h4>IBM Generative AI for Cyber Security Professionals</h4>
-                            <p class="cert-issuer">IBM / Coursera</p>
-                        </div>
-                        <svg class="cert-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <p>Currently interning at MeitY STQC - and open to full-time QA Automation, SDET, or Security QA roles
-                    and collaborations.</p>
-                <div class="contact-links">
-                    <div class="email-wrapper">
-                        <button class="contact-icon-btn email-trigger" aria-label="Show Email" id="emailTrigger">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <polyline points="22,6 12,13 2,6" />
-                            </svg>
-                        </button>
-                        <div class="email-popup" id="emailPopup">
-                            <span class="email-text" id="emailText">vivekkumararya2179@gmail.com</span>
-                            <button class="copy-btn" id="copyBtn" aria-label="Copy email">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                </svg>
-                            </button>
-                            <span class="copy-feedback" id="copyFeedback">Copied!</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/iamvikkuarya" target="_blank" class="contact-icon-btn"
-                        aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/iamvikkuarya" target="_blank" class="contact-icon-btn"
-                        aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Vivek Kumar. Portfolio.</p>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">I.</span>
+      <span class="meta-grp">
+        <span>Hero / Cover Plate</span>
+        <span class="dot-mark">•</span>
+        <span>QA & Security / Volume 01</span>
+      </span>
+      <span>001 / 008</span>
+    </div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="label" data-reveal>QA Automation & Security Engineer <span class="ix">· Nº 01</span></span>
+      <h1 class="display" data-reveal>QA & Security Testing with <em>engineering</em> rigor and <em>adversarial</em> intent<span class="dot">.</span></h1>
+      <p class="lead" data-reveal>Software Quality & Security Intern at the Ministry of Electronics & Information Technology - STQC Directorate. Building test automation frameworks, auditing APIs against OWASP standards, and conducting penetration testing on live government infrastructure.</p>
+      <div class="hero-actions" data-reveal>
+        <a class="btn btn-primary" href="#labs">
+          View Work
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+        </a>
+        <a class="btn btn-ghost" href="assets/resume1.pdf" target="_blank" rel="noreferrer">
+          View Resume
+          <span class="arrow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></span>
+        </a>
+      </div>
+      <div class="hero-stats" data-reveal>
+        <div class="stat">
+          <span class="ring solid">4</span>
+          <span class="stat-label"><b>projects</b>shipped</span>
         </div>
-    </footer>
-
-    <!-- Resume Modal -->
-    <div id="resumeModal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <a href="assets/resume1.pdf" target="_blank" class="btn-text">Open Full Screen ↗</a>
-                <button id="closeModal" class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <embed src="assets/resume1.pdf" type="application/pdf" width="100%" height="100%">
-            </div>
+        <div class="stat">
+          <span class="ring coral solid">10</span>
+          <span class="stat-label"><b>OWASP</b>API Top 10 ✓</span>
         </div>
+      </div>
+      <div class="hero-foot" data-reveal>
+        <span class="meta">↳ &nbsp; MeitY STQC · New Delhi · Feb – Aug 2026</span>
+        <span class="coord">28.6139° N · 77.2090° E</span>
+      </div>
+    </div>
+    <div class="hero-art" data-reveal="scale">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      <span class="annot annot-tl coord">FIG. 01 / VKA-26</span>
+      <span class="annot annot-tr">Plate Nº 01</span>
+      <span class="annot annot-bl coord">SHA · 22ce9d4</span>
+      <span class="annot annot-br">Built in&nbsp;<span class="coral">vanilla JS</span></span>
+      <img src="assets/hero.png" alt="Editorial collage - classical plaster head with sky cutouts, for QA & Security portfolio" />
+      <div class="index">
+        <span><span class="n">01</span>Test</span>
+        <span class="on"><span class="n">02</span>Audit</span>
+        <span><span class="n">03</span>Report</span>
+        <span><span class="n">04</span>Ship</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WIRE / GLOBAL TICKER -->
+<section class="wire" aria-label="Global wire - contexts and collaborators">
+  <div class="container wire-inner">
+    <div class="wire-left">
+      <span class="wire-mark" aria-hidden="true"><span class="wire-pulse"></span></span>
+      <span class="wire-title">
+        <b>From the field</b>
+        <span>Open · 4 projects · STQC + MIT-WPU</span>
+      </span>
+    </div>
+    <div class="wire-rows">
+      <div class="wire-row">
+        <div class="marquee-track" aria-hidden="true">
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">OWASP</span><span class="wire-name">API Top 10</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">KALI</span><span class="wire-name">Linux</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">PLAY</span><span class="wire-name">Playwright</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">PY</span><span class="wire-name">pytest</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">BURP</span><span class="wire-name">Suite Pro</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">DOCK</span><span class="wire-name">Docker</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">GH-A</span><span class="wire-name">GitHub Actions</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">POST</span><span class="wire-name">Postman</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">FLASK</span><span class="wire-name">Flask</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">FAST</span><span class="wire-name">FastAPI</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">SQL</span><span class="wire-name">PostgreSQL</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">SSL</span><span class="wire-name">TLS Analysis</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">OWASP</span><span class="wire-name">API Top 10</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">KALI</span><span class="wire-name">Linux</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">PLAY</span><span class="wire-name">Playwright</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">PY</span><span class="wire-name">pytest</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">BURP</span><span class="wire-name">Suite Pro</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">DOCK</span><span class="wire-name">Docker</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">GH-A</span><span class="wire-name">GitHub Actions</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">POST</span><span class="wire-name">Postman</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">FLASK</span><span class="wire-name">Flask</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">FAST</span><span class="wire-name">FastAPI</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">SQL</span><span class="wire-name">PostgreSQL</span></span>
+          <span class="wire-item"><span class="wire-dot">·</span><span class="wire-coord">SSL</span><span class="wire-name">TLS Analysis</span></span>
+        </div>
+      </div>
+      <div class="wire-row reverse">
+        <div class="marquee-track">
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/playwright-qa-framework-v2" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">QA Framework</span><span class="wire-role">playwright</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/QuickKart" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">QuickKart</span><span class="wire-role">automation</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/llm-council" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">LLM Council</span><span class="wire-role">api testing</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/Hiring-Assistant" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">TalentScout</span><span class="wire-role">e2e</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">@iamvikkuarya</span><span class="wire-role">all repos</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/playwright-qa-framework-v2" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">QA Framework</span><span class="wire-role">playwright</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/QuickKart" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">QuickKart</span><span class="wire-role">automation</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/llm-council" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">LLM Council</span><span class="wire-role">api testing</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya/Hiring-Assistant" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">TalentScout</span><span class="wire-role">e2e</span></a>
+          <a class="wire-item is-link" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener"><span class="wire-dot">·</span><span class="wire-handle">@iamvikkuarya</span><span class="wire-role">all repos</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">II.</span>
+      <span class="meta-grp">
+        <span>About / Manifesto</span>
+        <span class="dot-mark">•</span>
+        <span>QA & Security / Volume 01</span>
+      </span>
+      <span>002 / 008</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy" data-reveal>
+        <span class="label">About the engineer <span class="ix">· Nº 02</span></span>
+        <h2 class="display">I find the bugs other tests <em>miss</em><span class="dot">.</span></h2>
+        <div class="about-subsections">
+          <h3 class="subhead">Experience</h3>
+          <div class="sub-text">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Software Quality & Security Intern</span>
+                <span class="exp-meta">MeitY STQC · Feb 2026 – Aug 2026</span>
+              </div>
+              <ul class="exp-list">
+                <li>Audit government APIs against OWASP API Top 10 - identify BOLA, broken auth, excessive data exposure, and rate-limit gaps</li>
+                <li>Run authorized Kali Linux penetration testing on live MeitY portals - network recon, web app exploitation, privilege escalation paths</li>
+                <li>Author formal security audit reports with CVSS scoring, impact analysis, and remediation guidance for development teams</li>
+                <li>Build and maintain Playwright-based test automation framework - multi-tenant POM architecture, parallel execution, CI/CD integration</li>
+                <li>Design API contract tests with Postman/Newman - schema validation, negative testing, performance baselines across staging/prod</li>
+                <li>Automate SSL/TLS certificate monitoring and cipher-suite compliance checks for government infrastructure</li>
+              </ul>
+            </div>
+          </div>
+          <h3 class="subhead">Education</h3>
+          <div class="sub-text">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">MCA</span>
+                <span class="exp-meta">MIT World Peace University, Pune · 2024 – 2026</span>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">BCA</span>
+                <span class="exp-meta">Tulas Institute, Dehradun · 2020 – 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-ghost" href="assets/resume1.pdf" target="_blank" rel="noreferrer">
+          Read the resume
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+        </a>
+        <div class="footer-row">
+          <span class="mark">V</span>
+          <span>Testing · Security · Automation · Repeat</span>
+          <span class="stamp">
+            <span>Open to roles</span>
+            <span class="est-year">Est. MMXXVI</span>
+          </span>
+        </div>
+      </div>
+      <div class="about-art" data-reveal="right">
+        <img src="assets/about.png" alt="Editorial collage - museum-vitrine plaster profile for the manifesto section" />
+        <div class="about-side-note">
+          From framework<br/>architecture to<br/>adversarial security,<br/>I work the full<br/>quality stack.
+        </div>
+        <div class="about-caption">
+          <b>Software Quality & Security · MeitY STQC</b>
+          (Vivek Kumar Arya, MMXXVI)
+        </div>
+      </div>
     </div>
 
-    <!-- Certificate Modal -->
-    <div id="certModal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <a href="assets/Coursera.pdf" target="_blank" class="btn-text">Open Full Screen ↗</a>
-                <button id="closeCertModal" class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <embed src="assets/Coursera.pdf" type="application/pdf" width="100%" height="100%">
-            </div>
-        </div>
+      </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="capabilities" id="capabilities">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">III.</span>
+      <span class="meta-grp">
+        <span>Capabilities · Skills</span>
+        <span class="dot-mark">•</span>
+        <span>7 domains / 1 practice</span>
+      </span>
+      <span>003 / 008</span>
     </div>
+    <div class="capabilities-grid">
+      <div class="capabilities-art" data-reveal="left">
+        <span class="corner tl"></span>
+        <span class="corner br"></span>
+        <img src="assets/capabilities.png" alt="Editorial collage - Bauhaus architectural fragments for the capabilities matrix" />
+        <div class="ribbon"><b>VKA</b> &nbsp;·&nbsp; CAPABILITIES MATRIX &nbsp;·&nbsp; OD/26</div>
+      </div>
+      <div class="capabilities-copy" data-reveal>
+        <span class="label">Capabilities <span class="ix">· Nº 03</span></span>
+        <h2 class="display">Skills across the <em>quality</em> and <em>security</em> spectrum<span class="dot">.</span></h2>
+        <p class="lead">From debugging flaky tests and designing multi-tenant frameworks to authorized penetration testing on live infrastructure - the toolchain spans testing, security, automation, and operations.</p>
+        <div class="cards">
+          <div class="card" data-reveal>
+            <div class="num">01<span class="tag">Testing</span></div>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="5"/><path d="M14 14l5 5"/></svg>
+            <h3>Test Automation<br/>& Frameworks</h3>
+            <p>Playwright, Selenium, pytest, Postman. Multi-tenant Page Object Model, parallel execution, E2E integration.</p>
+            <span class="arrow-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+          </div>
+          <div class="card" data-reveal>
+            <div class="num">02<span class="tag">Security</span></div>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+            <h3>Security &<br/>Auditing</h3>
+            <p>Burp Suite Pro, Kali Linux, OWASP API Top 10, penetration testing, SSL/TLS analysis, DNS enumeration.</p>
+            <span class="arrow-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+          </div>
+          <div class="card" data-reveal>
+            <div class="num">03<span class="tag">Languages</span></div>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M9 9l-2 3 2 3M15 9l2 3-2 3"/></svg>
+            <h3>Languages<br/>& Frameworks</h3>
+            <p>Python, JavaScript, SQL, HTML/CSS. Flask, FastAPI, React, REST APIs in production test harnesses.</p>
+            <span class="arrow-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 19V5M5 12l7-7 7 7" />
-        </svg>
-    </button>
+<!-- LABS / PROJECTS -->
+<section class="labs" id="labs">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">IV.</span>
+      <span class="meta-grp">
+        <span>Labs / Projects Catalog</span>
+        <span class="dot-mark">•</span>
+        <span>04 of 04 shipped</span>
+      </span>
+      <span>004 / 008</span>
+    </div>
+    <div class="labs-head">
+      <div data-reveal>
+        <span class="label">Labs <span class="ix">· Nº 04</span></span>
+        <h2 class="display mt-xl">A living archive of <em>experiments</em> in test frameworks, automation, and security<span class="dot">.</span></h2>
+      </div>
+      <div class="pills" data-reveal="right">
+        <button class="pill active">All<span class="count">04</span></button>
+        <button class="pill">Framework<span class="count">02</span></button>
+        <button class="pill">Automation<span class="count">01</span></button>
+        <button class="pill">API<span class="count">01</span></button>
+      </div>
+    </div>
+    <div class="labs-meta">
+      <span class="ring">04</span>
+      <div class="meta-text">
+        <b>Shipped on GitHub</b>
+        every project has a repo<br/>with real architecture<br/>and working tests
+      </div>
+    </div>
+    <div class="labs-grid">
+      <div class="lab" data-reveal>
+        <div class="lab-img"><span class="badge">Featured</span><img src="assets/lab-1.png" alt="Editorial plate - folded magazine spreads for the QA Automation Framework" /></div>
+        <div class="num-row"><span>Nº 01</span><span>2026</span></div>
+        <h4>QA Automation Framework</h4>
+        <p>Debugged flaky test issues, designed multi-tenant Page Object Model framework, API + UI integration with tenant isolation.</p>
+        <a class="arrow-mark" href="https://github.com/iamvikkuarya/playwright-qa-framework-v2" target="_blank" rel="noreferrer noopener" aria-label="Open QA Automation Framework"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></a>
+      </div>
+      <div class="lab" data-reveal>
+        <div class="lab-img"><span class="badge">Automation</span><img src="assets/lab-2.png" alt="Editorial plate - film strip with synthetic eye for QuickKart" /></div>
+        <div class="num-row"><span>Nº 02</span><span>2026</span></div>
+        <h4>QuickKart</h4>
+        <p>Multi-platform web automation with Playwright. Parallel execution via ThreadPoolExecutor, anti-bot bypass, high scraping accuracy.</p>
+        <a class="arrow-mark" href="https://github.com/iamvikkuarya/QuickKart" target="_blank" rel="noreferrer noopener" aria-label="Open QuickKart"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></a>
+      </div>
+      <div class="lab" data-reveal>
+        <div class="lab-img"><span class="badge">API</span><img src="assets/lab-3.png" alt="Editorial plate - typewriter with prompt cards for LLM Council" /></div>
+        <div class="num-row"><span>Nº 03</span><span>2026</span></div>
+        <h4>LLM Council</h4>
+        <p>API testing framework for multi-LLM comparison. Timeout handling, retry logic, concurrent request validation across 5+ AI providers.</p>
+        <a class="arrow-mark" href="https://github.com/iamvikkuarya/llm-council" target="_blank" rel="noreferrer noopener" aria-label="Open LLM Council"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></a>
+      </div>
+      <div class="lab" data-reveal>
+        <div class="lab-img"><span class="badge">E2E</span><img src="assets/lab-4.png" alt="Editorial plate - five dim gauges for visual reasoning (E2E TalentScout)" /></div>
+        <div class="num-row"><span>Nº 04</span><span>2026</span></div>
+        <h4>TalentScout</h4>
+        <p>AI hiring assistant with comprehensive test coverage. E2E testing for chatbot flows, input validation, session management. High accuracy.</p>
+        <a class="arrow-mark" href="https://github.com/iamvikkuarya/Hiring-Assistant" target="_blank" rel="noreferrer noopener" aria-label="Open TalentScout"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></a>
+      </div>
+    </div>
+    <div class="labs-foot">
+      <div class="progress">
+        <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span>
+      </div>
+      <span class="meta">04 / 04 PROJECTS &nbsp;·&nbsp; <a class="library-link coral" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener">VIEW ALL REPOS →</a></span>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- METHOD -->
+<section class="method" id="method">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">V.</span>
+      <span class="meta-grp">
+        <span>Method / Loop</span>
+        <span class="dot-mark">•</span>
+        <span>04 stages, iterative</span>
+      </span>
+      <span>005 / 008</span>
+    </div>
+    <div class="method-head">
+      <div data-reveal>
+        <span class="label">Method <span class="ix">· Nº 05</span></span>
+        <h2 class="display mt-xl">How I <em>actually</em> work<span class="dot">.</span></h2>
+      </div>
+      <div class="right" data-reveal="right">
+        <span class="plus">+</span>
+        <p>Every stage is iterative, evidence-driven, and documented - composable tests, not opaque scripts.</p>
+      </div>
+    </div>
+    <div class="method-grid">
+      <div class="method-step" data-reveal>
+        <div class="num">01</div>
+        <h4>Detect <span class="arrow-r">→</span></h4>
+        <p>Scan the surface: enumerate endpoints, map the attack surface, identify the test boundaries and environment constraints.</p>
+        <div class="img"><img src="assets/method-1.png" alt="Editorial plate - magnifying glass over map for the Detect phase" /></div>
+      </div>
+      <div class="method-step" data-reveal>
+        <div class="num">02</div>
+        <h4>Discover <span class="arrow-r">→</span></h4>
+        <p>Turn 1 is the threat model: surface, audience, risk, OWASP category, data exposure. Locked down before a single test runs.</p>
+        <div class="img"><img src="assets/method-2.png" alt="Editorial plate - clipboard with questionnaire for the Discover phase" /></div>
+      </div>
+      <div class="method-step" data-reveal>
+        <div class="num">03</div>
+        <h4>Direct <span class="arrow-r">→</span></h4>
+        <p>Author the test suite: framework architecture, parallel execution, isolation. Burp Suite and pytest pick the deterministic path.</p>
+        <div class="img"><img src="assets/method-3.png" alt="Editorial plate - compass and ruler for the Direct phase" /></div>
+      </div>
+      <div class="method-step" data-reveal>
+        <div class="num">04</div>
+        <h4>Deliver</h4>
+        <p>The audit reports to disk: findings, impact analysis, remediation aligned to OWASP. You ship the framework and the evidence together.</p>
+        <div class="img"><img src="assets/method-4.png" alt="Editorial plate - printer tray with paper for the Deliver phase" /></div>
+      </div>
+    </div>
+    <div class="method-foot">
+      <div class="left">
+        <span class="ring"></span>
+        <span>Tests inform everything. Reports make it real.</span>
+      </div>
+      <div class="right"><a class="method-repo-link" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener"><b>github.com/iamvikkuarya</b></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL / CERTIFICATIONS -->
+<section class="testimonial">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">VII.</span>
+      <span class="meta-grp">
+        <span>Certifications / Credentials</span>
+        <span class="dot-mark">•</span>
+        <span>Standing on evidence</span>
+      </span>
+      <span>007 / 008</span>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-copy" data-reveal>
+        <span class="label">Credentials <span class="ix">· Nº 06</span></span>
+        <h2 class="mt-xl">Certifications are <em>evidence</em>, not decoration - every one backs a <em>skill</em> the portfolio claims<span class="dot">.</span></h2>
+        <div class="divider"></div>
+        <p class="partners-text">Verified credentials from NPTEL, Board Infinity, ExcelR, and IBM / Coursera - each mapping to a capability above.</p>
+      </div>
+      <div class="certs-grid" data-reveal="right">
+        <div class="cert-card" data-reveal aria-label="NPTEL certificate (PDF not available)">
+          <div class="cert-head">
+            <span class="cert-num">Nº 01</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-rule"></div>
+          <span class="cert-name">Software Testing</span>
+          <div class="cert-foot">
+            <span class="cert-issuer">NPTEL · IIT Kharagpur</span>
+            <span class="cert-arrow no-link">↗</span>
+          </div>
+        </div>
+        <a class="cert-card" data-reveal href="assets/SQA.pdf" target="_blank" rel="noreferrer" aria-label="SQA certificate">
+          <div class="cert-head">
+            <span class="cert-num">Nº 02</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-rule"></div>
+          <span class="cert-name">Software Quality Assurance</span>
+          <div class="cert-foot">
+            <span class="cert-issuer">Board Infinity · Coursera</span>
+            <span class="cert-arrow">↗</span>
+          </div>
+        </a>
+        <a class="cert-card" data-reveal href="assets/EXCELR.pdf" target="_blank" rel="noreferrer" aria-label="ExcelR certificate">
+          <div class="cert-head">
+            <span class="cert-num">Nº 03</span>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-rule"></div>
+          <span class="cert-name">Testing Tools · Selenium</span>
+          <div class="cert-foot">
+            <span class="cert-issuer">ExcelR</span>
+            <span class="cert-arrow">↗</span>
+          </div>
+        </a>
+        <a class="cert-card" data-reveal href="assets/Coursera.pdf" target="_blank" rel="noreferrer" aria-label="IBM certificate">
+          <div class="cert-head">
+            <span class="cert-num">Nº 04</span>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-rule"></div>
+          <span class="cert-name">Gen AI for Cybersecurity</span>
+          <div class="cert-foot">
+            <span class="cert-issuer">IBM · Coursera</span>
+            <span class="cert-arrow">↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="sec-rule">
+      <span class="roman">VIII.</span>
+      <span class="meta-grp">
+        <span>Contact / Conversation</span>
+        <span class="dot-mark">•</span>
+        <span>Open to full-time roles</span>
+      </span>
+      <span>008 / 008</span>
+    </div>
+    <div class="cta-grid cta-grid-single">
+      <div data-reveal>
+        <span class="label">Start a conversation <span class="ix">· Nº 07</span></span>
+        <h2 class="display">Let's build something <em>tested</em>, <em>secure,</em> and <em>shippable</em><span class="dot">.</span></h2>
+        <p class="lead">Recently completed my internship at MeitY STQC and open to full-time QA Automation, SDET, or Security QA roles and collaborations. Email, GitHub, or LinkedIn - all lead to the same inbox.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener">
+            GitHub
+            <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg></span>
+          </a>
+          <a class="email-pill" href="https://linkedin.com/in/iamvikkuarya" target="_blank" rel="noreferrer noopener">
+            LinkedIn
+            <span class="arrow-circle">→</span>
+          </a>
+          <a class="email-pill" href="mailto:vivekkumararya2179@gmail.com">
+            Email
+            <span class="arrow-circle">→</span>
+          </a>
+        </div>
+        <div class="cta-foot">
+          <span class="stamp">● Open to roles</span>
+          <span>SDET · QA Automation · Security QA</span>
+          <span class="coords">28.6139° N · 77.2090° E</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark">V</span>
+          <span>Vivek Kumar Arya</span>
+        </a>
+        <p class="foot-brand-desc">QA Automation & Security Engineer - building test frameworks and auditing live infrastructure at MeitY STQC. Open to full-time SDET and Security QA roles.</p>
+        <a class="foot-cta" href="assets/resume1.pdf" target="_blank" rel="noreferrer">Download resume<span class="meta">PDF · 2026</span></a>
+      </div>
+      <div class="foot-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#capabilities">Skills</a></li>
+          <li><a href="#labs">Projects</a></li>
+          <li><a href="#method">Method</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Projects</h5>
+        <ul>
+          <li><a href="https://github.com/iamvikkuarya/playwright-qa-framework-v2" target="_blank" rel="noreferrer noopener">QA Framework</a></li>
+          <li><a href="https://github.com/iamvikkuarya/QuickKart" target="_blank" rel="noreferrer noopener">QuickKart</a></li>
+          <li><a href="https://github.com/iamvikkuarya/llm-council" target="_blank" rel="noreferrer noopener">LLM Council</a></li>
+          <li><a href="https://github.com/iamvikkuarya/Hiring-Assistant" target="_blank" rel="noreferrer noopener">TalentScout</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://github.com/iamvikkuarya" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/iamvikkuarya" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+          <li><a href="mailto:vivekkumararya2179@gmail.com">Email</a></li>
+          <li><a href="assets/resume1.pdf" target="_blank" rel="noreferrer">Resume</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Credentials</h5>
+        <ul>
+          <li><a href="assets/SQA.pdf" target="_blank" rel="noreferrer">Board Infinity — Software Quality Assurance</a></li>
+          <li><a href="assets/EXCELR.pdf" target="_blank" rel="noreferrer">ExcelR — Testing Tools & Automation</a></li>
+          <li><a href="assets/Coursera.pdf" target="_blank" rel="noreferrer">IBM / Coursera — Gen AI for Cybersecurity</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="pulse"></span>● <b class="ink-text">Vivek Kumar Arya</b> · QA & Security · 2026 / Vol. 01 / Issue Nº 01</span>
+      <span class="right">
+        <span>New Delhi / India</span>
+        <span>28.6139° N · 77.2090° E</span>
+        <span class="coral">♥ MMXXVI</span>
+      </span>
+    </div>
+    <div class="foot-mega">
+      <div class="word" data-reveal="rise-lg">QA & <em>Security.</em></div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
